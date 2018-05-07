@@ -63,25 +63,21 @@ public class ChainCode {
 				System.out.print("0");
 				c++;
 			}
-
 			else if (arr[r+1][c] == true) {	//Test Down
 				arr[r][c] = false;
 				System.out.print("6");
 				r++;
 			}
-			
 			else if (arr[r][c-1] == true) {	//Test Left
 				arr[r][c] = false;
 				System.out.print("4");
 				--c;
 			}
-			
 			else if (arr[r-1][c] == true) {	//Test Up
 				arr[r][c] = false;
 				System.out.print("2");
 				--r;
 			}
-			
 			
 			/* Test Diagonal Directions */
 			else if (arr[r-1][c+1] == true) {	//Test Up-Right
@@ -90,7 +86,6 @@ public class ChainCode {
 				--r;
 				c++;
 			}
-			
 			else if (arr[r-1][c-1] == true) {	//Test Up-Left
 				arr[r][c] = false;
 				System.out.print("3");
@@ -98,21 +93,18 @@ public class ChainCode {
 				--c;
 				
 			}
-			
 			else if (arr[r+1][c-1] == true) {	//Test Down-Left
 				arr[r][c] = false;
 				System.out.print("5");
 				r++;
 				--c;
 			}
-			
 			else if (arr[r+1][c+1] == true) {	//Test Down-Right
 				arr[r][c] = false;
 				System.out.print("7");
 				r++;
 				c++;
 			}
-			
 			else {
 				isLoop = false;
 			}
